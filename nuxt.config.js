@@ -5,7 +5,7 @@ export default {
       lang: "jp",
       prefix: "og: http://ogp.me/ns#",
     },
-    titleTemplate: "%s - " + "C3 OpenCampus2021",
+    titleTemplate: "%s - " + "C3 OpenCampus2022",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -13,7 +13,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "九州工業大学情報工学部のサークルであるC3（CompositeComputerClub）の2021年度オープンキャンパスサイトです。C3部員が制作したゲームやCG、イラスト、アプリケーション、音楽、動画などのコンテンツを楽しむことが出来ます。このサイトも部員が制作した作品の一つです。是非楽しんでください！",
+          "九州工業大学情報工学部のサークルであるC3（CompositeComputerClub）の2022年度オープンキャンパスサイトです。C3部員が制作したゲームやCG、イラスト、アプリケーション、音楽、動画などのコンテンツを楽しむことが出来ます。このサイトも部員が制作した作品の一つです。是非楽しんでください！",
       },
       {
         hid: "keywords",
@@ -24,25 +24,25 @@ export default {
       {
         hid: "og-site-name",
         property: "og:site_name",
-        content: "C3 OpenCampus2021",
+        content: "C3 OpenCampus2022",
       },
       { hid: "og-type", property: "og:type", content: "" },
       {
         hid: "og-url",
         property: "og:url",
-        content: "https://oc2021.compositecomputer.club/",
+        content: "https://oc2022.compositecomputer.club/",
       },
-      { hid: "og-title", property: "og:title", content: "C3 OpenCampus2021" },
+      { hid: "og-title", property: "og:title", content: "C3 OpenCampus2022" },
       {
         hid: "og-description",
         property: "og:description",
         content:
-          "九州工業大学情報工学部のサークルであるC3（CompositeComputerClub）の2021年度オープンキャンパスサイトです。C3部員が制作したゲームやCG、イラスト、アプリケーション、音楽、動画などのコンテンツを楽しむことが出来ます。このサイトも部員が制作した作品の一つです。是非楽しんでください！",
+          "九州工業大学情報工学部のサークルであるC3（CompositeComputerClub）の2022年度オープンキャンパスサイトです。C3部員が制作したゲームやCG、イラスト、アプリケーション、音楽、動画などのコンテンツを楽しむことが出来ます。このサイトも部員が制作した作品の一つです。是非楽しんでください！",
       },
       {
         hid: "og-image",
         property: "og:image",
-        content: "https://oc2021.compositecomputer.club/oc2021-pc.jpg",
+        content: "https://oc2022.compositecomputer.club/oc2022-pc.jpg",
       },
       { hid: "fb:app_id", property: "fb:app_id", content: "App-ID" },
       { hid: "tw-card", name: "twitter:card", content: "summary_large_image" },
@@ -78,14 +78,14 @@ export default {
     [
       "@nuxtjs/google-gtag",
       {
-        id: "G-HT71B54RCT",
+        id: "G-60MD56TY3Q",
         debug: true,
       },
     ],
   ],
 
   axios: {
-    baseURL: "https://shared-vps.compositecomputer.club/api/v1/",
+    baseURL: "https://shared-vps-oc2022.compositecomputer.club/api/v1/",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -103,7 +103,7 @@ export default {
   },
 
   googleAnalytics: {
-    id: "G-HT71B54RCT",
+    id: "G-60MD56TY3Q",
   },
   target: "static",
   ssr: false,
