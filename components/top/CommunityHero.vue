@@ -1,5 +1,6 @@
 <template>
   <div class="community-hero" :style="styles">
+    <img :src="item.imgUrl" type="image" />
     <h1 class="name">{{ item.name }}</h1>
     <div class="description">{{ item.description }}</div>
     <a class="button-wrapper" :href="item.linkUrl" :title="item.name">
@@ -21,13 +22,6 @@ export default {
         linkUrl: ""
       }
     }
-  },
-  computed: {
-    styles() {
-      return {
-        "--bgUrl": "url(" + this.item.imgUrl + ")"
-      };
-    }
   }
 };
 </script>
@@ -35,7 +29,6 @@ export default {
 <style scoped>
 .community-hero,
 .name {
-  background-image: var(--bgUrl);
   background-size: cover;
 }
 .community-hero {
@@ -48,29 +41,30 @@ export default {
   margin: 0;
   padding: 40px;
   height: 100vh;
+  height: 100dvh;
+}
+.community-hero img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: -99;
+  -webkit-filter: blur(4px) brightness(60%);
+  -moz-filter: blur(4px) brightness(60%);
+  -o-filter: blur(4px) brightness(60%);
+  -ms-filter: blur(4px) brightness(60%);
+  filter: blur(4px) brightness(60%);
 }
 @media screen and (max-width: 767px) {
   .community-hero {
     padding: 20px;
   }
 }
-
-.community-hero:before {
-  content: "";
-  background: inherit;
-  -webkit-filter: blur(4px) brightness(60%);
-  -moz-filter: blur(4px) brightness(60%);
-  -o-filter: blur(4px) brightness(60%);
-  -ms-filter: blur(4px) brightness(60%);
-  filter: blur(4px) brightness(60%);
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
-}
-
 .name,
 .description,
 .button-wrapper {
@@ -93,9 +87,9 @@ export default {
   -webkit-background-clip: text;
   filter: brightness(200%);
   -webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media screen and (max-width: 767px) {
   .name {
@@ -110,9 +104,9 @@ export default {
   letter-spacing: 4px;
   line-height: 1.3em;
   -webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media screen and (max-width: 767px) {
   .description {

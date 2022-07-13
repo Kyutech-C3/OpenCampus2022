@@ -1,42 +1,50 @@
 <template>
   <div @click="$router.push(workPath)" class="card-link">
     <article class="article">
-      <img :src="card_image" alt="thumbnail" title="thumbnail" class="thumbnail"/>
-      <div class="tag_viewer1" v-if="isHoverFlag">
-      </div>
+      <img
+        :src="card_image"
+        alt="thumbnail"
+        title="thumbnail"
+        class="thumbnail"
+      />
+      <div class="tag_viewer1" v-if="isHoverFlag"></div>
       <div class="content">
-          <div class="title">{{title}}</div>
-          <div class="tag_wrap">
-            <div class="tag" @mouseover="isHoverFlag = true" @mouseleave="isHoverFlag = false">
-              <Tag 
-                v-for="tag in tags"
-                extraSmall
-                outline
-                :tag="tag"
-                :key="tag.id"
-              />
-            </div>
+        <div class="title">{{ title }}</div>
+        <div class="tag_wrap">
+          <div
+            class="tag"
+            @mouseover="isHoverFlag = true"
+            @mouseleave="isHoverFlag = false"
+          >
+            <Tag
+              v-for="tag in tags"
+              extraSmall
+              outline
+              :tag="tag"
+              :key="tag.id"
+            />
           </div>
-          <div class="description">{{description}}</div>
+        </div>
+        <div class="description">{{ description }}</div>
       </div>
     </article>
   </div>
 </template>
 
 <script>
-import Tag from "../Tag.vue"
+import Tag from "../Tag.vue";
 export default {
   data() {
     return {
       style: true,
       isHoverFlag: false
-    }
+    };
   },
   props: {
     title: {
       type: String,
       required: true,
-      default: "hoge",
+      default: "hoge"
     },
     team: {
       type: Object,
@@ -44,7 +52,7 @@ export default {
     },
     tags: {
       type: Array,
-      required: true,
+      required: true
     },
     description: {
       type: String,
@@ -58,32 +66,36 @@ export default {
     },
     work_id: {
       type: Number,
-      require:true,
+      require: true
     },
     genre_id: {
       type: String,
-      require: true,
+      require: true
     },
     key: {
       type: Number,
-      require: true,
+      require: true
     }
   },
   components: {
-    Tag,
+    Tag
   },
   computed: {
-    workPath () {
-      return `/works/${this.work_id}`
+    workPath() {
+      return `/works/${this.work_id}`;
     }
+  },
+  created() {
+    console.log(this.description);
+    this.description = this.description.replace(/<.*>/g, "");
   }
-}
+};
 </script>
 
 <style scoped>
 .card-link {
   text-decoration: none;
-  color: #000000 ;
+  color: #000000;
 }
 .article {
   height: 380px;
@@ -139,7 +151,6 @@ export default {
   justify-content: flex-start;
   margin-right: 3px;
   margin-bottom: 4px;
-
 }
 .description {
   position: relative;

@@ -1,80 +1,89 @@
 <template>
   <div class="wrap">
     <!-- ハンバーガーメニューのボタン -->
-    <div class="button" @click="ActiveBtn=!ActiveBtn">
-      <span class="icon-bar line-1" :class="{'close-1':ActiveBtn}"></span>
-      <span class="icon-bar line-2" :class="{'close-2':ActiveBtn}"></span>
-      <span class="icon-bar line-3" :class="{'close-3':ActiveBtn}"></span>
+    <div class="button" @click="ActiveBtn = !ActiveBtn">
+      <span class="icon-bar line-1" :class="{ 'close-1': ActiveBtn }"></span>
+      <span class="icon-bar line-2" :class="{ 'close-2': ActiveBtn }"></span>
+      <span class="icon-bar line-3" :class="{ 'close-3': ActiveBtn }"></span>
     </div>
     <!-- サイドメニュー -->
     <transition name="slide">
       <div class="nav-content" v-show="ActiveBtn">
-          <ul>
-            <li>
-              <div class="home">
-                <a href="/" title="HOME">
-                  <font-awesome-icon class="icon" icon="home" />
-                  HOME
-                </a>
-              </div>
-            </li>
-            <li><p>作品を見る</p></li>
-            <li>
-              <div class="list">
-                <a :href="linkUrl2" title="Game">
-                  <font-awesome-icon class="icon" icon="gamepad" />
-                  GAME
-                </a>
-              </div>
-            </li>
-            <li>
-              <div class="list">
-                <a :href="linkUrl3" title="CG">
-                  <font-awesome-icon class="icon" :icon="['far', 'images']" />
-                  CG
-                </a>
-              </div>
-            </li>
-            <li>
-              <div class="list">
-                <a :href="linkUrl1" title="Hack">
-                  <font-awesome-icon class="icon" icon="laptop-code" />
-                  HACK
-                </a>
-              </div>
-            </li>
-            <li>
-              <div class="list">
-                <a :href="linkUrl4" title="Media_art">
-                  <font-awesome-icon class="icon" icon="palette"/>
-                  MEDIA_ART
-                </a>
-              </div>
-            </li>
-            <li>
-              <div class="home">
-                <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_brank" title="YouTube">
-                  <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
-                  YouTube
-                </a>
-              </div>
-            </li>
-            <li>
-              <div class="home">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform" target="_brank" title="アンケート">
-                  <font-awesome-icon class="icon" icon="file-alt" />
-                  アンケート
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li>
+            <div class="home">
+              <a href="/" title="HOME">
+                <font-awesome-icon class="icon" icon="home" />
+                &nbsp;HOME
+              </a>
+            </div>
+          </li>
+          <li><p>作品を見る</p></li>
+          <li>
+            <div class="list">
+              <a :href="linkUrl2" title="Game">
+                <font-awesome-icon class="icon" icon="gamepad" />
+                GAME
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="list">
+              <a :href="linkUrl3" title="CG">
+                <font-awesome-icon class="icon" :icon="['far', 'images']" />
+                CG
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="list">
+              <a :href="linkUrl1" title="Hack">
+                <font-awesome-icon class="icon" icon="laptop-code" />
+                HACK
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="list">
+              <a :href="linkUrl4" title="Media_art">
+                <font-awesome-icon class="icon" icon="palette" />
+                MEDIA_ART
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="home" id="youtube">
+              <a
+                href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw"
+                target="_brank"
+                title="YouTube"
+              >
+                <img
+                  class="icon-img"
+                  src="@/assets/ovice.webp"
+                  type="image/webp"
+                  title="展示会参加申込"
+                />
+                展示会参加申込
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="home">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform"
+                target="_brank"
+                title="アンケート"
+              >
+                <font-awesome-icon class="icon" icon="file-alt" />
+                &nbsp;アンケート
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </transition>
-    <div 
-      v-if="ActiveBtn"
-      class="close-area"
-      @click="ActiveBtn=!ActiveBtn"
-    />
+    <div v-if="ActiveBtn" class="close-area" @click="ActiveBtn = !ActiveBtn" />
   </div>
 </template>
 
@@ -87,7 +96,7 @@ export default {
       linkUrl2: "/community/2",
       linkUrl3: "/community/3",
       linkUrl4: "/community/4"
-    }
+    };
   }
 };
 </script>
@@ -111,7 +120,9 @@ export default {
 .icon-bar + .icon-bar {
   margin-top: 8px;
 }
-.line-1, .line-2, .line-3 {
+.line-1,
+.line-2,
+.line-3 {
   transition: 0.3s ease;
 }
 .close-1 {
@@ -138,16 +149,21 @@ export default {
   flex-direction: column;
   z-index: 102;
 }
-.slide-enter-active, .slide-leave-active {
+.slide-enter-active,
+.slide-leave-active {
   transform: translate(0px, 0px);
   transition: 0.4s ease;
 }
-.slide-enter, .slide-leave-to {
+.slide-enter,
+.slide-leave-to {
   transform: translateY(0) translateX(-100%);
   transition: 0.4s ease;
 }
 .home {
   margin-bottom: 10px;
+}
+#youtube {
+  margin-top: 10px;
 }
 .list {
   padding-left: 20px;
@@ -159,6 +175,11 @@ export default {
 .icon {
   color: white;
   font-size: max(5%, 18px);
+}
+.icon-img {
+  width: 20px;
+  height: auto;
+  filter: grayscale(100%) invert(100%);
 }
 .nav-content li a,
 .nav-content li p {
@@ -212,7 +233,7 @@ ul {
     padding: 22px 10px 10px 20px;
   }
   .nav-content {
-    width: 80%;
+    width: 250px;
   }
 }
 </style>

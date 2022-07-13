@@ -9,9 +9,9 @@
   </div>
 </template>
 <script>
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
-import Footer2 from '../components/Footer2.vue'
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import Footer2 from "../components/Footer2.vue";
 
 export default {
   components: {
@@ -21,10 +21,10 @@ export default {
   },
   computed: {
     isRootPath() {
-      return this.$route.path === '/'
+      return this.$route.path === "/";
     }
   }
-}
+};
 </script>
 
 <style lang="css" scoped>
@@ -61,42 +61,27 @@ export default {
 
 @media (max-width: 480px) {
   .root-container {
-    padding:  0 1.5rem;
+    padding: 0 10px;
     margin-top: 65px;
   }
 }
-
 </style>
 
 <style>
 @font-face {
-  font-family: 'Inter var';
+  font-family: "Inter var";
   font-weight: 100 900;
   font-style: normal;
-  font-named-instance: 'Regular';
-  src: url("../assets/font/InterWeb/Inter-roman.var.woff2?v=3.19") format("woff2");
+  font-named-instance: "Regular";
+  src: url("../assets/font/InterWeb/Inter-roman.var.woff2?v=3.19")
+    format("woff2");
 }
 
 html {
-  font-family:
-    'Inter var',
-    'YuGothic Medium',
-    'Yu Gothic Medium',
-    'YuGothic',
-    'Yu Gothic',
-    'Hiragino Sans',
-    'ヒラギノ角ゴシック',
-    'Noto Sans CJK JP',
-    'メイリオ',
-    'Meiryo',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Inter var", "YuGothic Medium", "Yu Gothic Medium", "YuGothic",
+    "Yu Gothic", "Hiragino Sans", "ヒラギノ角ゴシック", "Noto Sans CJK JP",
+    "メイリオ", "Meiryo", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   word-spacing: 1px;
@@ -108,25 +93,10 @@ html {
 }
 
 .bold {
-  font-family:
-    'Inter var',
-    'YuGothic Bold',
-    'Yu Gothic Bold',
-    'YuGothic',
-    'Yu Gothic',
-    'Hiragino Sans',
-    'ヒラギノ角ゴシック',
-    'Noto Sans CJK JP',
-    'メイリオ',
-    'Meiryo',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Inter var", "YuGothic Bold", "Yu Gothic Bold", "YuGothic",
+    "Yu Gothic", "Hiragino Sans", "ヒラギノ角ゴシック", "Noto Sans CJK JP",
+    "メイリオ", "Meiryo", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
 }
 

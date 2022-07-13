@@ -7,15 +7,16 @@
         </div>
         <div class="main">
           <div class="mainContent">
-            C3は「Composite Computer Club」の略称で、コンピューターを使ってゲーム、CG、音楽、映像作品、webサイト・アプリ等を創作・公開する九州工業大学情報工学部のサークルです！<br/><br/>
-            普段はいくつかのコミュニティに分かれて、技術交流や作業会をしたり、有志が集まって共同制作を行ったりしています。月に一度、お互いの創作物を見せ合う展覧会などの活動もあります。<br/><br/>
-            自分でゲームを作ってみたい。<br/>
-            作った創作物をコミックマーケットなどのイベントで配布したい。<br/>
-            カッコいい映像を編集したい。<br/>
-            自分でCGモデリングしてバ美肉したい。<br/>
-            便利なwebアプリを作りたい。<br/><br/>
-            そんな色んな想いを持った部員がC3で活動しています。九工大情報工学部に入学することがあれば是非とも見学して、『〇〇を作ってみたい』という気持ちになれば入部してもらえると嬉しいです！<br/><br/>
-            当サイトも部員が作成したもので、ここでは部員が作った創作物を体験することができます。C3に興味がある方、そうではない方でも是非観ていって下さい。<br/>
+            C3は「Composite Computer
+            Club」の略称で、コンピューターを使ってゲーム、CG、音楽、映像作品、webサイト・アプリ等を創作・公開する九州工業大学情報工学部のサークルです！<br /><br />
+            普段はいくつかのコミュニティに分かれて、技術交流や作業会をしたり、有志が集まって共同制作を行ったりしています。月に一度、お互いの創作物を見せ合う展覧会などの活動もあります。<br /><br />
+            自分でゲームを作ってみたい。<br />
+            作った創作物をコミックマーケットなどのイベントで配布したい。<br />
+            カッコいい映像を編集したい。<br />
+            自分でCGモデリングしてバ美肉したい。<br />
+            便利なwebアプリを作りたい。<br /><br />
+            そんな色んな想いを持った部員がC3で活動しています。九工大情報工学部に入学することがあれば是非とも見学して、『〇〇を作ってみたい』という気持ちになれば入部してもらえると嬉しいです！<br /><br />
+            当サイトも部員が作成したもので、ここでは部員が作った創作物を体験することができます。C3に興味がある方、そうではない方でも是非観ていって下さい。<br />
           </div>
         </div>
       </div>
@@ -24,14 +25,14 @@
 </template>
 
 <script>
-export default ({
+export default {
   data() {
     return {
       visible: false
     };
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
     handleScroll() {
@@ -42,13 +43,13 @@ export default ({
       //   elementY: elementY
       // });
       if (!this.visible) {
-        this.visible = (elementY < window.innerHeight);
+        this.visible = elementY < window.innerHeight;
       } else if (elementY > window.innerHeight) {
         this.visible = !this.visible;
       }
-    },
-  },
-})
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -57,14 +58,15 @@ export default ({
 .fade-leave-active {
   transition: all 3s ease;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   transform: translateY(10%);
   opacity: 0;
 }
 
 /* style */
 .wrap {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 .titleWrap {
   position: relative;
@@ -72,28 +74,28 @@ export default ({
 }
 .titleContent {
   padding: 0 0.1em;
-  color: #456586;
+  color: #3b8070;
   font-size: clamp(60px, 15vw, 288px);
   font-weight: bold;
   width: 100%;
   height: max(18vw, 70px);
   z-index: 10;
   -webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: inline;
-  background: -moz-linear-gradient(top, transparent 50%, #FFFF22B3 50%);
-  background: -webkit-linear-gradient(top, transparent 50%, #FFFF22B3 50%);
-  background: linear-gradient(to bottom, transparent 50%, #FFFF22B3 50%);
+  background: -moz-linear-gradient(top, transparent 50%, #ffff22b3 50%);
+  background: -webkit-linear-gradient(top, transparent 50%, #ffff22b3 50%);
+  background: linear-gradient(to bottom, transparent 50%, #ffff22b3 50%);
 }
 .main {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 .mainContent {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   text-align: left;
-  color: #4A4A4A;
+  color: #4a4a4a;
   font-size: clamp(16px, 2vw, 39px);
   line-height: max(4vw, 20px);
   text-align: justify;

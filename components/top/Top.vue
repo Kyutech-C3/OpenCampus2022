@@ -1,21 +1,22 @@
 <template>
   <div>
     <div class="topwrapper">
-      <h1 class="blackline bold">C3 Open Campus 2021</h1>
+      <h1 class="blackline bold">C3 Open Campus 2022</h1>
       <div class="date">
-        Jul <span class="thu">22</span><span class="blank">_</span> ‣
-        <span class="fri ss01">23</span><span class="blank">_</span>
+        Jul <span class="thu">16</span><span class="blank">_</span> ‣
+        <span class="fri ss01">17</span><span class="blank">_</span>
       </div>
       <div class="scroll cv05" @click="scroll">scroll</div>
       <a
-        href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdJawn0Vyhm7bzLpo4QehjAoSld1AwgXSyNZIIatdIJNElrxQ/viewform"
         target="_blank"
-        title="YouTube"
-        class="link youtube"
+        title="展示会参加申込"
+        class="link ovice"
       >
-        <font-awesome-icon :icon="['fab', 'youtube']" class="icon" />
+        <img class="icon-img" src="@/assets/ovice.webp" type="image/webp" />
         <div class="hide">
-          <span class="fs14">« </span><span class="up">YouTube</span>
+          <span class="fs14">« </span>
+          <span class="up">展示会参加申込</span>
         </div>
       </a>
       <a
@@ -61,21 +62,9 @@
   letter-spacing: 0.2vw;
   color: white;
   display: inline;
-  background: -moz-linear-gradient(
-    top,
-    transparent 50%,
-    rgba(0, 0, 0, 0.5) 50%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    transparent 50%,
-    rgba(0, 0, 0, 0.5) 50%
-  );
-  background: linear-gradient(
-    to bottom,
-    transparent 50%,
-    rgba(0, 0, 0, 0.5) 50%
-  );
+  background: -moz-linear-gradient(top, transparent 50%, #3b8070cf 50%);
+  background: -webkit-linear-gradient(top, transparent 50%, #3b8070cf 50%);
+  background: linear-gradient(to bottom, transparent 50%, #3b8070cf 50%);
 }
 
 .date {
@@ -94,7 +83,7 @@
 }
 
 .thu::after {
-  content: "Thu";
+  content: "Sat";
   transform: rotate(90deg);
   position: absolute;
   top: 3vw;
@@ -110,7 +99,7 @@
 }
 
 .fri::after {
-  content: "Fri";
+  content: "Sun";
   transform: rotate(90deg);
   position: absolute;
   top: 3vw;
@@ -145,27 +134,22 @@
 
 .link {
   color: black;
-  font-size: 20px;
-  font-size: calc(var(--size) / 3);
+  font-size: calc(var(--size) / 2.5);
   background: #fafafa;
   text-align: left;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  width: 60px;
-  height: 60px;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 30px;
-  border-radius: calc(var(--size) / 2);
-  display: inline-block;
+  width: calc(7 * var(--size));
+  height: calc(var(--size) + 10px);
+  border-radius: var(--size);
+  display: flex;
   overflow: hidden;
   transition: 0.4s ease-out;
+  align-items: center;
+  justify-content: center;
 }
 
 .link:hover {
-  width: 15em;
-  width: calc(5 * var(--size));
-  padding-left: 8px;
-  padding-left: calc(var(--size) * 2 / 15);
+  padding-right: calc(var(--size) * 2 / 15);
   box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.5);
 }
 
@@ -173,78 +157,24 @@
   text-align: left;
   transition: 0s;
 }
-
-.youtube {
-  transform: translate(-80px, -160px);
-  transform: translate(
-    calc(var(--size) * (-80) / 60),
-    calc(var(--size) * (-160) / 60)
-  );
-  transition: 0.4s;
+.link div {
+  margin-left: 10px;
 }
 
-.youtube:hover {
-  transform: translate(-70px, -160px);
+.ovice {
   transform: translate(
-    calc(var(--size) * (-70) / 60),
-    calc(var(--size) * (-160) / 60)
+    calc(var(--size) - 9vw),
+    calc(var(--size) * (-170) / 60)
   );
 }
 
 .googleform {
-  transform: translate(-80px, -80px);
-  transform: translate(
-    calc(var(--size) * (-80) / 60),
-    calc(var(--size) * (-80) / 60)
-  );
-  transition: 0.4s;
-}
-
-.googleform:hover {
-  transform: translate(-70px, -80px);
-  transform: translate(
-    calc(var(--size) * (-70) / 60),
-    calc(var(--size) * (-80) / 60)
-  );
-}
-
-.link div {
-  position: absolute;
-  top: 50%;
-  left: 60px;
-  left: var(--size);
-  transform: translate(0, -50%);
-}
-
-.hide {
-  opacity: 0;
-  margin-left: 4px;
-  margin-left: calc(var(--size) / 15);
-}
-
-.link:hover .hide {
-  opacity: 1;
-  transition: 0.2s 0.3s;
-}
-
-.link .icon {
-  font-size: 32px;
-  font-size: calc(var(--size) * 8 / 15);
-  color: red;
-  line-height: 60px;
-  line-height: var(--size);
-  height: 60px;
-  height: var(--size);
-  margin: 0 0 0 11px;
-  margin: 0 0 0 calc(var(--size) * 11 / 60);
+  transform: translate(calc(var(--size) - 9vw), calc(var(--size) * (-80) / 60));
 }
 
 .link img {
-  height: 36px;
   height: calc(var(--size) * 0.6);
   width: auto;
-  margin: 12px 0 0 12.36px;
-  margin: calc(var(--size) / 5) 0 0 calc(var(--size) * 12.36 / 60);
 }
 
 .fs14 {
@@ -340,6 +270,18 @@
   .bgimg {
     background-image: url("/topimgSP.png");
     width: 100vw;
+    height: 100%;
+  }
+  .link {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .ovice {
+    top: calc(64% - 2vw);
+  }
+
+  .googleform {
+    top: 70%;
   }
 }
 </style>

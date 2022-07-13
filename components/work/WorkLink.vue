@@ -12,9 +12,9 @@ export default {
   props: {
     to: {
       type: String,
-			require: true,
-    },
-  },
+      require: true
+    }
+  }
 };
 </script>
 <style scoped>
@@ -24,11 +24,12 @@ export default {
 }
 .icon {
   margin-right: 0.5rem;
-	color: #000000;
+  color: #000000;
 }
 .bold {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 80%;
 }
 </style>

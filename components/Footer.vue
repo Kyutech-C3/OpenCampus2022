@@ -2,18 +2,38 @@
   <footer>
     <ul>
       <li>
-        <a href="https://oc2021.compositecomputer.club/" target="_blank" title="OC2021">
-          <img id="logo" src="../static/Footer/C3logo.png" alt="logo"/>
+        <a
+          href="https://oc2021.compositecomputer.club/"
+          target="_blank"
+          title="OC2021"
+        >
+          <img id="logo" src="../static/Footer/C3logo.png" alt="logo" />
         </a>
       </li>
       <div class="linkBox">
-        <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" title="C3 YouTube Channel">
+        <a
+          class="linkItem"
+          href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw"
+          target="_blank"
+          title="C3 YouTube Channel"
+        >
           <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
         </a>
-        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20" target="_blank" title="C3 Twitter">
+        <a
+          class="linkItem"
+          href="https://twitter.com/c3_kyutech?s=20"
+          target="_blank"
+          title="C3 Twitter"
+        >
           <font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
         </a>
-        <a class="note" href="https://note.com/c3noteproject" target="_blank" title="C3 note"><img src="../static/Footer/note-logo.svg"></a>
+        <a
+          class="note"
+          href="https://note.com/c3noteproject"
+          target="_blank"
+          title="C3 note"
+          ><img src="../static/Footer/note-logo.svg"
+        /></a>
       </div>
       <li class="text-link-box">
         <a
@@ -22,7 +42,8 @@
           target="_blank"
           title="C3 Official Website"
         >
-          C3 Official Website<font-awesome-icon class="link-icon" icon="external-link-alt" />
+          C3 Official Site
+          <font-awesome-icon class="link-icon" icon="external-link-alt" />
         </a>
         <br />
         <a
@@ -31,7 +52,10 @@
           target="_blank"
           title="Kyutech HP"
         >
-          情報工学部<font-awesome-icon class="link-icon" icon="external-link-alt" />
+          情報工学部<font-awesome-icon
+            class="link-icon"
+            icon="external-link-alt"
+          />
         </a>
       </li>
     </ul>
@@ -48,13 +72,15 @@
 footer {
   max-width: 100%;
   width: 100%;
-  background-color: #28425a;
+  background-color: #3b8070;
   margin: 0;
   padding: 30px 10vw;
   position: relative;
   /* z-index: 20; */
 }
-a::selection, div::selection, button::selection {
+a::selection,
+div::selection,
+button::selection {
   background: #4565863d;
 }
 a:hover {
@@ -62,7 +88,7 @@ a:hover {
 }
 button:hover {
   opacity: 0.5;
-  background: #28425a;
+  background: #3b8070;
 }
 .link {
   opacity: 0.9;
@@ -84,17 +110,17 @@ button:hover {
 }
 a.note {
   color: white;
-	text-decoration: none;
-	/*margin: auto 8px;*/
-	font-size: 18px;
+  text-decoration: none;
+  /*margin: auto 8px;*/
+  font-size: 18px;
 }
 .note img {
   width: 60px;
   margin: -10px;
 }
 .icon {
-	color: white;
-	font-size: 30px;
+  color: white;
+  font-size: 30px;
 }
 /* PC/タブレット横 */
 @media screen and (min-width: 769px) {
@@ -128,7 +154,7 @@ a.note {
   #returnTop {
     border-radius: 20px/20px;
     padding: 10px;
-    background-color: #28425a;
+    background-color: #3b8070;
     border: none;
     color: white;
     position: absolute;
@@ -195,7 +221,7 @@ a.note {
   #returnTop {
     border-radius: 20px/20px;
     padding: 10px;
-    background-color: #28425a;
+    background-color: #3b8070;
     border: none;
     color: white;
     position: absolute;
@@ -217,7 +243,7 @@ export default {
   data() {
     return {
       buttonActive: true,
-      scroll: 0,
+      scroll: 0
     };
   },
   mounted() {
@@ -227,9 +253,9 @@ export default {
     returnTop() {
       window.scrollTo({
         top: 0,
-        behavior: "smooth",
+        behavior: "smooth"
       });
-    },
+    }
   },
   scrollWindow() {
     const top = 100;
@@ -239,6 +265,6 @@ export default {
     } else {
       this.buttonActive = false;
     }
-  },
+  }
 };
 </script>
