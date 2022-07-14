@@ -54,9 +54,9 @@
           <li>
             <div class="home" id="youtube">
               <a
-                href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdJawn0Vyhm7bzLpo4QehjAoSld1AwgXSyNZIIatdIJNElrxQ/viewform"
                 target="_brank"
-                title="YouTube"
+                title="展示会参加申込"
               >
                 <img
                   class="icon-img"
