@@ -3,7 +3,11 @@
 		<div class="tag-selector-header">
 			<font-awesome-icon icon="search" />
 			<div class="label">タグで探す</div>
-			<TagButton class="all-select-button" name="クリア" color="#808080" :enabled="selectedTags.length > 0" small @click="clearSelectedTags" />
+			<TagClearButton
+				class="tag-clear-button"
+				:disabled="selectedTags.length <= 0"
+				@click="clearSelectedTags"
+			/>
 			<v-select class="tag-select" :options="options" :value="[]" @option:selected="handleSelect" />
 		</div>
 		<div class="tag-list-container">
@@ -18,7 +22,7 @@
 	</div>
 </template>
 <script>
-import TagButton from './TagButton'
+import TagClearButton from './TagClearButton.vue'
 import VSelect from 'vue-select'
 /**
  * type Tag = {
@@ -34,7 +38,7 @@ export default {
 		event: 'selectTags'
 	},
 	components: {
-		TagButton,
+		TagClearButton,
 		VSelect
 	},
 	props: {
@@ -112,8 +116,8 @@ export default {
 	user-select: none;
 }
 
-.all-select-button {
-	margin-left: .5rem;
+.tag-clear-button {
+	margin: 0 1rem;
 }
 
 .tag-list-container {
