@@ -3,9 +3,9 @@
     <ul>
       <li>
         <a
-          href="https://oc2021.compositecomputer.club/"
+          href="https://oc2022.compositecomputer.club/"
           target="_blank"
-          title="OC2021"
+          title="OC2022"
         >
           <img id="logo" src="../static/Footer/C3logo.png" alt="logo" />
         </a>
@@ -64,7 +64,7 @@
         <font-awesome-icon id="up" icon="angle-up" /><br />PAGE TOP
       </button>
     </div>
-    <div class="copyRight">© 2021 C3</div>
+    <div class="copyRight">© 2021-2022 C3</div>
   </footer>
 </template>
 

@@ -9,13 +9,12 @@
       :card_image="card_item.thumbnail"
       :work_id="card_item.id"
       :genre_id="card_item.genre.title"
-      :key="card_item.id"
     />
   </div>
 </template>
 
 <script>
-import Card from "./Card"
+import Card from "./Card";
 
 export default {
   components: { Card },
@@ -25,7 +24,7 @@ export default {
       required: true
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -34,5 +33,5 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   row-gap: 38px;
   column-gap: 26px;
-} 
+}
 </style>

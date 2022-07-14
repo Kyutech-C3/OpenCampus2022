@@ -1,24 +1,28 @@
 <template>
-  <div class="modal-wrapper" :class="{open: open}">
-    <div class="modal-background-click-panel" @click="$emit('setOpen', false)"></div>
+  <div class="modal-wrapper" :class="{ open: open }">
+    <div
+      class="modal-background-click-panel"
+      @click="$emit('setOpen', false)"
+    ></div>
     <div class="modal-container">
       <h1 class="title">ダウンロードしても構いませんか？</h1>
-      <h3 class="description">Google Driveから、.zip圧縮ファイルがダウンロードされます。</h3>
+      <h3 class="description">
+        Google Driveから、.zip圧縮ファイルがダウンロードされます。
+      </h3>
       <a class="link" :href="downloadURL">ダウンロードする</a>
-      </a>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'DownloadConfirmModal',
+  name: "DownloadConfirmModal",
   model: {
-    prop: 'open',
-    event: 'setOpen'
+    prop: "open",
+    event: "setOpen"
   },
   computed: {
     downloadURL() {
-      return `https://shared-vps.compositecomputer.club/api/v1/works/${this.workID}/download`
+      return `https://shared-vps-oc2022.compositecomputer.club/api/v1/works/${this.workID}/download`;
     }
   },
   props: {
@@ -28,10 +32,10 @@ export default {
     },
     workID: {
       type: String,
-      default: '1'
+      default: "1"
     }
   }
-}
+};
 </script>
 <style scoped>
 .modal-wrapper {
@@ -57,7 +61,8 @@ export default {
 }
 .modal-background-click-panel {
   position: absolute;
-  top: 0;left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(10px);
@@ -73,7 +78,6 @@ export default {
   z-index: 10;
 }
 .title {
-  
 }
 .description {
   margin-bottom: 2rem;

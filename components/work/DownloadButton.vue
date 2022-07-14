@@ -1,28 +1,11 @@
 <template>
   <div class="download_button" @click="$emit('click')">
-    <div class="download_link" >
-        <font-awesome-icon :icon="['fas', 'file-download']" id="fa"/>
-        ZIPダウンロード
-      </div>
+    <div class="download_link">
+      <font-awesome-icon :icon="['fas', 'file-download']" id="fa" />
+      ZIPダウンロード
+    </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    workID: {
-      type: String,
-      require: true,
-      default: "1"
-    },
-  },
-  computed: {
-    downloadRedirectLink() {
-      return `https://shared-vps.compositecomputer.club/api/v1/works/${this.workID}/download`
-    }
-  }
-};
-</script>
 
 <style scoped>
 .download_button {
@@ -38,7 +21,7 @@ export default {
 .download_link {
   display: block;
   color: rgb(0, 0, 0);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   width: 100%;

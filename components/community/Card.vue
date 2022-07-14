@@ -71,10 +71,6 @@ export default {
     genre_id: {
       type: String,
       require: true
-    },
-    key: {
-      type: Number,
-      require: true
     }
   },
   components: {
@@ -84,10 +80,6 @@ export default {
     workPath() {
       return `/works/${this.work_id}`;
     }
-  },
-  created() {
-    console.log(this.description);
-    this.description = this.description.replace(/<.*>/g, "");
   }
 };
 </script>

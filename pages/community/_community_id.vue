@@ -83,12 +83,18 @@ export default {
     }
   },
   async asyncData({ error, params, $axios }) {
-    const res = await $axios.get(`genres/${params.community_id}/`).catch(e => {
+    let res = await $axios.get(`genres/${params.community_id}/`).catch(e => {
       console.error("failed", e);
       throw new Error(e);
     });
 
     if (res.status === 200) {
+      for (let i = 0; i < res.data.works.length; i++) {
+        res.data.works[i].description = res.data.works[i].description.replace(
+          /<.*>/g,
+          ""
+        );
+      }
       return {
         genre: res.data
       };

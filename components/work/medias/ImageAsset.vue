@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: "YouTube",
+  name: "ImageAsset",
   props: {
     src: {
       type: String,

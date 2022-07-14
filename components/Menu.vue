@@ -29,7 +29,7 @@
           </li>
           <li>
             <div class="list">
-              <a :href="linkUrl3" title="CG">
+              <a :href="linkUrl1" title="CG">
                 <font-awesome-icon class="icon" :icon="['far', 'images']" />
                 CG
               </a>
@@ -37,7 +37,7 @@
           </li>
           <li>
             <div class="list">
-              <a :href="linkUrl1" title="Hack">
+              <a :href="linkUrl3" title="Hack">
                 <font-awesome-icon class="icon" icon="laptop-code" />
                 HACK
               </a>

@@ -1,20 +1,19 @@
 <template>
   <div>
-    <dev class="header_top">
+    <div class="header_top">
       <div class="header_left">
         <span class="title">{{ title }}</span>
       </div>
       <div class="l">
         <favorite :work_id="work_id" :goods="goods" class="favorite" />
       </div>
-    </dev>
+    </div>
     <div class="header_mid">
       <div class="viewer">
         <viewer :mediaAssets="media_assets" />
       </div>
       <div class="work_info">
         <download-button
-          :download_link="download_link"
           class="download"
           v-if="download_link != null"
           @click="openDownloadConfirmModal"
@@ -257,7 +256,7 @@ export default {
     height: 60vw;
   }
   .work_info {
-    margin-top: 0;
+    margin-top: 20px;
     width: 100%;
     height: auto;
     margin-right: 20px;

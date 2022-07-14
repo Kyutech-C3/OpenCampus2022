@@ -1,5 +1,5 @@
 <template>
-  <div class="community-hero" :style="styles">
+  <div class="community-hero">
     <img :src="item.imgUrl" type="image" />
     <h1 class="name">{{ item.name }}</h1>
     <div class="description">{{ item.description }}</div>
@@ -73,7 +73,7 @@ export default {
 
 .name {
   font-size: clamp(90px, 12vw, 231px);
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);
   padding-top: 60px;
   padding-left: 100px;
   position: absolute;
