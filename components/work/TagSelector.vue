@@ -141,4 +141,9 @@ export default {
 	width: auto;
 	z-index: 10;
 }
+
+.tag-selector-header >>> .vs__dropdown-toggle,
+.tag-selector-header >>> .vs__search {
+	cursor: pointer;
+}
 </style>
