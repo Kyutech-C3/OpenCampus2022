@@ -2,16 +2,13 @@
   <footer>
     <ul>
       <li>
-        <a
-          href="https://oc2022.compositecomputer.club/"
-          target="_blank"
-          title="OC2022"
-        >
+        <a href="https://oc2022.compositecomputer.club/" title="OC2022">
           <img
             id="logo"
             src="../static/Footer/C3logo.png"
             alt="logo"
             loading="lazy"
+            class="select-none"
           />
         </a>
       </li>
@@ -22,7 +19,10 @@
           target="_blank"
           title="C3 YouTube Channel"
         >
-          <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
+          <font-awesome-icon
+            class="icon select-none"
+            :icon="['fab', 'youtube']"
+          />
         </a>
         <a
           class="linkItem"
@@ -30,19 +30,27 @@
           target="_blank"
           title="C3 Twitter"
         >
-          <font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
+          <font-awesome-icon
+            class="icon select-none"
+            :icon="['fab', 'twitter']"
+          />
         </a>
         <a
           class="note"
           href="https://note.com/c3noteproject"
           target="_blank"
           title="C3 note"
-          ><img src="../static/Footer/note-logo.svg" loading="lazy"
-        /></a>
+        >
+          <img
+            src="../static/Footer/note-logo.svg"
+            loading="lazy"
+            class="select-none"
+          />
+        </a>
       </div>
       <li class="text-link-box">
         <a
-          class="link"
+          class="link select-none"
           href="https://compositecomputer.club/"
           target="_blank"
           title="C3 Official Website"
@@ -52,7 +60,7 @@
         </a>
         <br />
         <a
-          class="link"
+          class="link select-none"
           href="https://www.iizuka.kyutech.ac.jp/"
           target="_blank"
           title="Kyutech HP"
@@ -64,16 +72,22 @@
         </a>
       </li>
     </ul>
-    <div class="returnTopBox">
+    <div class="returnTopBox select-none">
       <button id="returnTop" v-show="buttonActive" @click="returnTop">
         <font-awesome-icon id="up" icon="angle-up" /><br />PAGE TOP
       </button>
     </div>
-    <div class="copyRight">© 2021-2022 C3</div>
+    <div class="copyRight select-none">© 2021-2022 C3</div>
   </footer>
 </template>
 
 <style scoped>
+.select-none {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 footer {
   max-width: 100%;
   width: 100%;
