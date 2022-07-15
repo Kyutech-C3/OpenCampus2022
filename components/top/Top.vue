@@ -59,7 +59,7 @@ export default {
 .topwrapper {
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
-  height: 100dvh;
+  height: 100lvh;
   position: relative;
   overflow: hidden;
   padding: 20vh 6vw 0 6vw;

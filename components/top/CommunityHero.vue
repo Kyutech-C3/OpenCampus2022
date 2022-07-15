@@ -41,7 +41,7 @@ export default {
   margin: 0;
   padding: 40px;
   height: 100vh;
-  height: 100dvh;
+  height: 100lvh;
 }
 .community-hero img {
   height: 100%;
