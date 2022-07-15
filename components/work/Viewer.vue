@@ -51,7 +51,7 @@ export default {
         itemsToShow: 1,
         wheelControl: false,
         centerMode: true,
-        infiniteScroll: true
+        infiniteScroll: false
       }
     };
   },
