@@ -16,7 +16,6 @@
   height: 50px;
   text-align: center;
   cursor: pointer;
-  padding-right: 20px;
 }
 .download_link {
   display: block;
