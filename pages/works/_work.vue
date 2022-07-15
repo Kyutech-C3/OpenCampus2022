@@ -60,7 +60,7 @@ export default {
         {
           hid: "og-url",
           property: "og:url",
-          content: `https://oc2022.compositecomputer.club/works/${this.work_data.id}`
+          content: `https://oc2022.compositecomputer.club/works/${this.work_data.id}/`
         },
         {
           hid: "og-title",
@@ -78,23 +78,12 @@ export default {
           property: "og:image",
           content: this.img_url
         }
-      ],
-      link: [
-        {
-          hid: "canonical",
-          rel: "canonical",
-          href: `https://oc2022.compositecomputer.club/works/${this.$route.params.id}`
-        }
       ]
     };
   },
   created() {
-    console.log("=======");
-    console.log(this.work_data);
-    this.title = `お知らせ - ${this.work_data.title}`;
-    this.description = `${
-      this.work_data.title
-    } - ${this.work_data.description.replace(/<.*>/g, "")}`;
+    this.title = `C3 OpenCampus2022 - ${this.work_data.title}`;
+    this.description = this.work_data.description.replace(/<.*>/g, "");
     this.img_url = this.work_data.thumbnail;
   },
   async asyncData({ params, $axios }) {

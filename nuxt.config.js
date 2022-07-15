@@ -46,9 +46,9 @@ export default {
       },
       { hid: "fb:app_id", property: "fb:app_id", content: "App-ID" },
       { hid: "tw-card", name: "twitter:card", content: "summary_large_image" },
-      { hid: "tw-site", name: "twitter:site", content: "@Twitter" }
+      { hid: "tw-site", name: "twitter:site", content: "@c3_kyutech" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     script: [
       {
         src: "/ghpagespathsolver.js"
