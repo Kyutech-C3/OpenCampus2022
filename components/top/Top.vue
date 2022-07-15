@@ -13,7 +13,12 @@
         title="展示会参加申込"
         class="link ovice"
       >
-        <img class="icon-img" src="@/assets/ovice.webp" type="image/webp" />
+        <img
+          class="icon-img"
+          src="@/assets/ovice.webp"
+          type="image/webp"
+          loading="lazy"
+        />
         <div class="hide">
           <span class="fs14">« </span>
           <span class="up">展示会参加申込</span>
@@ -25,12 +30,12 @@
         title="アンケート"
         class="link googleform"
       >
-        <img src="../../static/googleform.png" alt="img" />
+        <img src="../../static/googleform.png" alt="img" loading="lazy" />
         <div class="hide">
           <span class="fs14">« </span><span class="up">アンケート実施中！</span>
         </div>
       </a>
-      <img src="/oc2022top_pc.webp" class="bgimg" />
+      <img src="/oc2022top_pc.webp" class="bgimg" loading="lazy" />
       <!-- <img v-else src="/oc2022top_mobile.webp" class="bgimg" /> -->
     </div>
   </div>

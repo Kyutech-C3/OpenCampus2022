@@ -6,6 +6,7 @@
         alt="thumbnail"
         title="thumbnail"
         class="thumbnail"
+        loading="lazy"
       />
       <div class="tag_viewer1" v-if="isHoverFlag"></div>
       <div class="content">

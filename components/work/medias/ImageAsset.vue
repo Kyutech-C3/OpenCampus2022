@@ -1,6 +1,6 @@
 <template>
   <div class="image-asset-container">
-    <img class="image" :src="src" />
+    <img class="image" :src="src" loading="lazy" />
   </div>
 </template>
 <script>

@@ -7,7 +7,12 @@
           target="_blank"
           title="OC2022"
         >
-          <img id="logo" src="../static/Footer/C3logo.png" alt="logo" />
+          <img
+            id="logo"
+            src="../static/Footer/C3logo.png"
+            alt="logo"
+            loading="lazy"
+          />
         </a>
       </li>
       <div class="linkBox">
@@ -32,7 +37,7 @@
           href="https://note.com/c3noteproject"
           target="_blank"
           title="C3 note"
-          ><img src="../static/Footer/note-logo.svg"
+          ><img src="../static/Footer/note-logo.svg" loading="lazy"
         /></a>
       </div>
       <li class="text-link-box">

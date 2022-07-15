@@ -7,7 +7,12 @@
       id="ovice"
       title="C3 展覧会申込"
     >
-      <img class="icon" src="@/assets/ovice.webp" type="image/webp" />
+      <img
+        class="icon"
+        src="@/assets/ovice.webp"
+        type="image/webp"
+        loading="lazy"
+      />
       <span class="title">&laquo; 展示会参加申込</span>
     </a>
     <a

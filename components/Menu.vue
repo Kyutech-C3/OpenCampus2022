@@ -63,6 +63,7 @@
                   src="@/assets/ovice.webp"
                   type="image/webp"
                   title="展示会参加申込"
+                  loading="lazy"
                 />
                 展示会参加申込
               </a>
