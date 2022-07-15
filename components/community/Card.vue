@@ -4,7 +4,7 @@
       <img
         :src="card_image"
         alt="thumbnail"
-        title="thumbnail"
+        :title="title"
         class="thumbnail"
         loading="lazy"
       />
@@ -106,12 +106,24 @@ export default {
   height: 270px;
   padding: 10px 15px 10px 15px;
   overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .thumbnail {
   position: relative;
   width: 100%;
   height: 220px;
   object-fit: cover;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  /* pointer-events: none; */
 }
 .title {
   font-size: 18px;
