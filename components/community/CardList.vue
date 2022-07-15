@@ -9,6 +9,7 @@
       :card_image="card_item.thumbnail"
       :work_id="card_item.id"
       :genre_id="card_item.genre.title"
+      :key="card_item.id"
     />
   </div>
 </template>
