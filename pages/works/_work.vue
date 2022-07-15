@@ -110,7 +110,7 @@ export default {
 }
 @media (min-width: 1920px) {
   .page-wrapper {
-    width: 1920px;
+    width: 1700px;
   }
 }
 @media screen and (max-width: 1300px) {
