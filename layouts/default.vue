@@ -48,9 +48,9 @@ export default {
 }
 
 @media (min-width: 1920px) {
-  .root-container {
+  /* .root-container {
     width: 1920px;
-  }
+  } */
 }
 
 @media (max-width: calc(1920px - 1px)) {

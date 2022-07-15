@@ -31,7 +31,7 @@
         </div>
       </a>
       <img src="/oc2022top_pc.webp" class="bgimg" />
-      <!-- <img src="/oc2022top_mobile.webp" class="bgimg" /> -->
+      <!-- <img v-else src="/oc2022top_mobile.webp" class="bgimg" /> -->
     </div>
   </div>
 </template>
@@ -50,6 +50,9 @@ export default {
     resizeWindow() {
       console.log(this.width);
       this.width = window.innerWidth;
+    },
+    isMobile() {
+      return this.width < 600;
     }
   }
 };
