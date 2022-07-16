@@ -35,8 +35,7 @@
           <span class="fs14">« </span><span class="up">アンケート実施中！</span>
         </div>
       </a>
-      <img src="/oc2022top_pc.webp" class="bgimg" loading="lazy" />
-      <!-- <img v-else src="/oc2022top_mobile.webp" class="bgimg" /> -->
+      <div class="bgimg"></div>
     </div>
   </div>
 </template>
@@ -279,23 +278,24 @@ export default {
 .scroll:hover::after {
   background-position: center top;
 }
-
 .bgimg {
-  width: 100%;
-  height: 100%;
+  background-image: url("/oc2022top_pc.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  height: 100lvh;
+  width: 100vw;
   position: absolute;
-  object-fit: cover;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   z-index: -10;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
   .bgimg {
-    background-image: url("/topimgSP.png");
+    background-image: url("/oc2022top_mobile.webp");
     width: 100vw;
     height: 100%;
   }
